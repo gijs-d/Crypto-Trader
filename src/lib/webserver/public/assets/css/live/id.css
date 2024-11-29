@@ -1,0 +1,99 @@
+section {
+    position: relative;
+}
+
+p.line {
+    display: block;
+    margin: 6px 0;
+    text-align: center;
+}
+
+td {
+    padding: 5px 15px;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.line p {
+    margin: 5px 0;
+}
+
+.loss {
+    color: #ff0000;
+}
+
+.nextUpdate {
+}
+
+.win {
+    color: #00ff00;
+}
+
+#delete {
+    background-color: #d10000;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ff0000;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+#games {
+    border-radius: 15px;
+    box-shadow: 0 0 15px white;
+    display: block;
+    max-height: 290px;
+    overflow: auto;
+}
+
+#games.empty thead,
+#games.empty thead tr {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#games th {
+    min-width: 65px;
+}
+
+#reload {
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#score {
+    margin-bottom: 10px;
+}
+
+#delete:hover {
+    box-shadow: 0 0 25px #ff0000;
+    color: black;
+}
+
+#games th:nth-child(2),
+#games th:nth-child(3) {
+    min-width: 120px;
+}
+
+#games th:nth-child(1) {
+    min-width: 40px;
+}
+
+@media only screen and (max-width: 460px) {
+    #buy2 {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    #buy2 {
+        width: 90%;
+    }
+}

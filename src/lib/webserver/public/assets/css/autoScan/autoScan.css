@@ -1,0 +1,101 @@
+main{
+	align-content: center;
+}
+
+form details {
+	margin: 5px 0;
+	padding: 10px;
+}
+
+form label::after {
+	content: '';
+}
+
+input[type='submit'] {
+	padding: 10px;
+}
+
+.checkboxes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.checkboxes label {
+	align-items: center;
+	border: thin solid black;
+	border-radius: 10px;
+	box-shadow: 0 0 5px white;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 5px;
+	padding: 5px;
+	width: 120px;
+}
+
+.checkboxes label input {
+	display: block;
+	height: 20px;
+	width: 20px;
+}
+
+.closeSession {
+	background-color: rgba(255, 0, 0, 0.5);
+	border-radius: 5px;
+	box-shadow: 0 0 5px red;
+	margin: 0;
+	padding: 5px 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.sessionTimer {
+	margin: 0;
+	text-align: left;
+}
+
+.checkboxes label:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.closeSession:hover {
+	background-color: rgba(255, 0, 0, 0.7);
+	box-shadow: 0 0 15px red;
+}
+
+#sessions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#sessions li {
+	border: thin solid black;
+	border-radius: 10px;
+	box-shadow: 0 0 15px white;
+	box-sizing: border-box;
+	margin: 20px;
+	padding: 10px;
+	position: relative;
+	width: 90%;
+}
+
+#sessions li details {
+	margin: 5px 0;
+	padding: 5px;
+}
+
+#sessions li details li {
+	margin: 5px;
+	width: 120px;
+}
+
+#sessions li details ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}

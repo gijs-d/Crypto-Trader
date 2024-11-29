@@ -1,0 +1,101 @@
+<%- include('../parts/head1') %>
+<title>Scan</title>
+<link type="text/css" rel="stylesheet" href="/assets/css/scan/scan.css">
+<%- include('../parts/head2') %>
+
+<body>
+    <main id="main">
+        <a href="/" class="backbtn">
+            <input type="button" class="navBtn" value="<-">
+        </a>
+        <details open>
+            <summary>Chart</summary>
+            <div id="chart"></div>
+        </details>
+        <form class="load">
+            <details>
+                <summary>Settings <span id="chartGain"></span></summary>
+                <section>
+                    <details>
+                        <summary>Chart Settings</summary>
+                        <section>
+                            <label for="pair">Pair</label>
+                            <input type="text" id="pair">
+                            <label for="timef">Timeframe</label>
+                            <input type="text" id="timef">
+                            <label for="size">Size</label>
+                            <input type="number" id="size">
+                            <label for="live">Live</label>
+                            <input type="number" id="live">
+                            <input type="button" value="Reload" id="reload">
+                        </section>
+                    </details>
+                    <details>
+                        <summary>Check Settings</summary>
+                        <section>
+                            <label for="fee">Fee</label>
+                            <input type="number" id="fee">
+                            <label for="scann">Scan n</label>
+                            <input type="number" id="scann">
+                            <label for="minTas">Min Tas</label>
+                            <input type="number" id="minTas">
+                            <label for="maxTas">Max Tas</label>
+                            <input type="number" id="maxTas">
+                            <label for="addOld">Add Old</label>
+                            <input type="number" id="addOld">
+                            <label for="tHs">Twitch Highscore</label>
+                            <input type="number" id="tHs">
+                        </section>
+                    </details>
+                    <details>
+                        <summary>Check Best (score)=>:</summary>
+                        <ul id="checkBests"></ul>
+                        <details id="addCheckBestDetails">
+                            <summary>Add New</summary>
+                            <p >score: {<b>gain</b>: gains/loss in %, <b>gainC</b>: cumulative gains/loss,
+                                <b>wins</b>: won trades, <b>tot</b>: total trades, <b>u</b>: average,
+                                <b>std</b>: standard deviation, <b>max</b>: max gain/loss,
+                                <b>min</b>: min gain/loss}
+                            </p>
+                            <input type="text" id="newCheckBest" placeholder="score.gain * (score.wins / (score.tot || 1))">
+                            <input type="button" value="Add" id="addCheckBest">
+                        </details>
+                    </details>
+                </section>
+            </details>
+            <input type="text" id="checkSettings" placeholder="tas [1,2]">
+            <p id="checkScore"></p>
+            <input type="button" value="Check" id="check">
+            <input type="button" value="Scan" id="scan">
+        </form>
+        <form class="load">
+            <div id="bestScores"></div>
+            <br>
+            <p id="scanning"></p>
+            <p id="score"> % ( % )</p>
+            <p id="wins"> / ( % )</p>
+            <p id="stat">|</p>
+        </form>
+        <section id="buy2" class="load">
+            <div class="line">
+                <form id="addTas">
+                    <select id="addtasselect">
+                        <option value="dblema">dblema</option>
+                    </select>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+            <ul id="buys"></ul>
+        </section>
+    </main>
+    <script src="/assets/js/parts/lwc.js"></script>
+    <script src="/assets/js/parts/chart.js"></script>
+    <script src="/modules/types.js"></script>
+    <script src="/modules/check.js"></script>
+    <script src="/modules/tas.js"></script>
+    <script src="/modules/scan.js"></script>
+    <script src="/modules/highscores.js"></script>
+    <script src="/assets/js/scan/scan.js"></script>
+</body>
+
+</html>

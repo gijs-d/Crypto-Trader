@@ -1,0 +1,54 @@
+<%- include('../parts/head1') %>
+<title>Live</title>
+<link type="text/css" rel="stylesheet" href="/assets/css/scan/scan.css">
+<link type="text/css" rel="stylesheet" href="/assets/css/live/id.css">
+<%- include('../parts/head2') %>
+
+<body>
+    <main id="main">
+        <a href="/live" class="backbtn">
+            <input type="button" class="navBtn" value="<-">
+        </a>
+        <details open>
+            <summary>chart</summary>
+            <div id="chart"></div>
+        </details>
+        <section id="buy2" class="load">
+            <p id="reload">0s</p>
+            <div class="line">
+                <p><%=game.set.pair %> <%=  game.set.timef %></p>
+                <p><%= game.tas.map(t=>`${t.type} [${t.set.join(', ')}]`).join(', ')%></p>
+            </div>
+            <p class="line"><%= new Date(game.startTime).toLocaleString()%> | <%=  game.running %> | <span id="startTime"></span></p>
+            <p class="line" id="open"></p>
+            <p class="line" id="score"></p>
+            <table id="games" class="<%= 1 %>">
+                <thead>
+                    <tr>
+                        <th>Nr</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Change</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="buys"></tbody>
+            </table>
+            <p class="line"></p>
+            <input type="button" value="Delete" id="delete">
+        </section>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/assets/js/parts/lwc.js"></script>
+    <script src="/assets/js/parts/chart.js"></script>
+    <script src="/modules/types.js"></script>
+    <script src="/modules/check.js"></script>
+    <script src="/modules/tas.js"></script>
+    <script src="/modules/scan.js"></script>
+    <script>
+        let game = JSON.parse('<%- JSON.stringify(game) %>');
+    </script>
+    <script src="/assets/js/live/id.js"></script>
+</body>
+
+</html>

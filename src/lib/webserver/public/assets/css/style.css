@@ -1,0 +1,311 @@
+:root {
+    --bg: linear-gradient(
+        to bottom right,
+        rgba(20, 0, 0, 0.9),
+        rgba(20, 20, 0, 0.9),
+        rgba(0, 20, 0, 0.9)
+    );
+    --bg2: rgba(0, 0, 0, 0.6);
+    --gr: linear-gradient(45deg, #ff0000, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #0000ff);
+    --gradient-shadow: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff0000,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0000ff,
+        #0000ff,
+        #00ffff,
+        #00ff00,
+        #ffff00,
+        #ff0000,
+        #ff0000
+    );
+    --shadow: rgb(255, 255, 255);
+    --text: #fff;
+}
+
+* {
+    font-size: 1rem;
+}
+
+html,
+body,
+main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+main {
+    background: var(--bg);
+    overflow: auto;
+    position: relative;
+    z-index: 0;
+}
+
+section,
+form details,
+form summary,
+#buys {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 5px;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+form details input[type='button'] {
+    margin: 10px auto;
+}
+
+form input,
+form label,
+form textarea,
+input,
+select,
+option,
+.line input {
+    background-color: transparent;
+    box-sizing: border-box;
+    color: var(--text);
+    display: block;
+    margin: 5px 0;
+    width: 45%;
+}
+
+form input,
+form textarea,
+input,
+select,
+option,
+.line input {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--shadow);
+}
+
+form input[type='button'] {
+    width: 70%;
+}
+
+form p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+form,
+.menu,
+#buy2 {
+    background-color: var(--bg2);
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 5px;
+    position: relative;
+    width: 80%;
+}
+
+form input:hover,
+input:hover,
+select:hover,
+.line input:hover {
+    box-shadow: 0 0 5px 3px var(--shadow);
+}
+
+form label::after {
+    content: ':';
+}
+
+form::after,
+.menu::after,
+#buy2::after {
+    background-position: 0 0;
+    filter: blur(30px);
+    height: calc(100% + 6px);
+    top: -4px;
+    width: calc(100% + 6px);
+}
+
+form::after,
+form::before,
+.menu::after,
+.menu::before,
+#buy2::after,
+#buy2::before {
+    background: var(--gr);
+    background-position: 0 0;
+    background-size: 100%;
+    border-radius: 15px;
+    content: '';
+    height: calc(100% + 4px);
+    position: absolute;
+    top: -2px;
+    width: calc(100% + 4px);
+    z-index: -1;
+}
+
+input {
+    width: auto;
+}
+
+option {
+    background-color: #000;
+}
+
+details {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--shadow);
+    box-sizing: border-box;
+    color: var(--text);
+}
+
+summary {
+    text-align: center;
+}
+
+details:hover {
+    box-shadow: 0 0 15px var(--shadow);
+}
+
+a {
+    text-decoration: none;
+}
+
+.lose,
+.win {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-weight: 600;
+    text-shadow: 0 0 15px black;
+}
+
+.menu,
+#buy2 {
+    flex-grow: 1;
+}
+
+.backbtn {
+    font-size: 1.5rem;
+    left: 0px;
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    z-index: 5;
+}
+
+.green {
+    border-radius: 15px;
+    box-shadow: 0 0 3px rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.line * {
+    text-align: center;
+    width: 70%;
+}
+
+.loading {
+    border: none;
+    box-shadow: none;
+}
+
+.lose {
+    color: rgb(255, 0, 0);
+}
+
+.navBtn {
+    font-size: 1.3125rem;
+    padding: 5px;
+}
+
+.red {
+    border-radius: 15px;
+    box-shadow: 0 0 3px rgba(255, 0, 0, 0.5);
+    text-shadow: 0 0 5px #ff0000;
+}
+
+.win {
+    color: rgb(0, 255, 0);
+}
+
+#buys {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+#scanning {
+    margin: 5px 0;
+}
+
+#main .loading::after,
+#main .loading::before {
+    animation: animate 21s linear infinite;
+    background: var(--gradient-shadow);
+    background-size: 400%;
+    border-radius: 15px;
+    content: '';
+    height: calc(100% + 4px);
+    left: -2px;
+    position: absolute;
+    top: -2px;
+    width: calc(100% + 4px);
+    z-index: -1;
+}
+
+#main .loading::after {
+    animation: animate 40s linear infinite;
+    filter: blur(75px);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}

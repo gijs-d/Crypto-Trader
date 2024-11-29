@@ -1,0 +1,128 @@
+p {
+	line-height: 150%;
+	margin: 0;
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100%;
+}
+
+li {
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 15px;
+	box-shadow: 0 0 5px var(--shadow);
+	box-sizing: border-box;
+	flex-grow: 1;
+	margin: 5px;
+	max-width: 400px;
+	min-width: 300px;
+	padding: 5px;
+	width: 30%;
+}
+
+li:hover {
+	box-shadow: 0 0 15px var(--shadow);
+}
+
+form details {
+	margin: 0 0 10px 0;
+}
+
+details {
+	padding: 5px 0;
+	width: 100%;
+}
+
+.liveTasArr,
+.liveTasL {
+	margin: 5px 0;
+	padding: 0;
+}
+
+.comment {
+	background-color: rgba(255, 255, 255, 0.2);
+	font-size: 0.9375rem;
+	overflow: auto;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.green {
+	color: rgb(0, 255, 0);
+}
+
+.grow {
+	flex-grow: 2;
+}
+
+.live {
+	align-items: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.live .nextUpdate {
+	background-color: rgba(0, 0, 0, 0.6);
+	border-bottom-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin: 0;
+	padding: 2px 5px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: unset;
+}
+
+.live p {
+	flex-grow: 0;
+	height: 24px;
+	width: 100%;
+}
+
+.live.open {
+	background-color: rgba(0, 60, 0, 0.4);
+	box-shadow: inset 0 0 5px rgb(0, 255, 0), 0 0 15px 3px rgb(0, 255, 0);
+}
+
+.liveDiv {
+	display: flex;
+	width: 100%;
+}
+
+.liveTasArr {
+	height: 30px;
+	overflow: auto;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 90%;
+}
+
+.liveTasL {
+	width: 10% !important;
+}
+
+.liveTime {
+	align-self: flex-end;
+	padding-top: 10px;
+}
+
+.liveTitle {
+	height: 30px;
+	overflow: auto;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.menu .navBtn {
+	width: 100%;
+}
+
+.live.open:hover {
+	box-shadow: 0 0 25px 3px rgb(0, 255, 0);
+}

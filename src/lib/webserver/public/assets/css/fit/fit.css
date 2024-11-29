@@ -1,0 +1,73 @@
+.addtas {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+}
+
+.btns {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.btns input {
+	margin: 0 10px;
+}
+
+.close {
+	display: block;
+	flex-grow: 0;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20px;
+}
+
+.max {
+	position: absolute;
+	width: 50px;
+}
+
+.setGroup {
+	display: flex;
+	height: 30px;
+}
+
+.setGroup .slider {
+	width: calc(100% - 40px);
+}
+
+.setGroup p {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+	width: 40px;
+}
+
+#score {
+	margin: 5px 0;
+	text-align: center;
+	width: 100%;
+}
+
+#tas {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+#tas li {
+	border-radius: 15px;
+	box-shadow: 0 0 20px black;
+	margin: 10px;
+	max-width: 300px;
+	padding: 10px;
+	position: relative;
+}
+
+#tas li p {
+	margin: 0;
+}

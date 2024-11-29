@@ -1,0 +1,30 @@
+form div {
+	display: inherit;
+	flex-wrap: inherit;
+	justify-content: inherit;
+	width: 100%;
+}
+
+details {
+	padding: 10px 0;
+}
+
+#checkBests li {
+	align-items: stretch;
+	display: flex;
+	width: 100%;
+}
+
+#checkBests li input {
+	margin: 5px 0;
+	width: 10%;
+}
+
+#checkBests li input[type='text'] {
+	flex-grow: 1;
+	width: 75%;
+}
+
+#checkBests li p {
+	width: 10%;
+}

@@ -1,0 +1,101 @@
+<%- include('../parts/head1') %>
+<title>Tas</title>
+<link type="text/css" rel="stylesheet" href="/assets/css/scan/scan.css">
+<link type="text/css" rel="stylesheet" href="/assets/css/tas/test.css">
+<%- include('../parts/head2') %>
+
+<body>
+    <main id="main">
+        <a href="/tas" class="backbtn">
+            <input type="button" class="navBtn" value="<-">
+        </a>
+        <div id="chart"></div>
+        <form class="load">
+            <details>
+                <summary>Settings <span id="chartGain"></span></summary>
+                <section>
+                    <details>
+                        <summary>Chart Settings</summary>
+                        <section>
+                            <label for="pair">Pair</label>
+                            <input type="text" id="pair">
+                            <label for="timef">Timef</label>
+                            <input type="text" id="timef">
+                            <label for="size">Size</label>
+                            <input type="number" id="size">
+                            <input type="button" value="Reload" id="reload">
+                        </section>
+                    </details>
+                    <details>
+                        <summary>Check Settings</summary>
+                        <section>
+                            <label for="fee">Fee</label>
+                            <input type="number" id="fee">
+                            <label for="scann">Scan n</label>
+                            <input type="number" id="scann">
+                            <label for="minTas">Min Tas</label>
+                            <input type="number" id="minTas">
+                            <label for="maxTas">Max Tas</label>
+                            <input type="number" id="maxTas">
+                            <label for="addOld">Add Old</label>
+                            <input type="number" id="addOld">
+                            <label for="tHs">Twitch Highscore</label>
+                            <input type="number" id="tHs">
+                        </section>
+                    </details>
+                </section>
+            </details>
+            <input type="button" value="Check" id="check">
+            <input type="button" value="Scan" id="scan">
+        </form>
+        <form class="load">
+            <div id="bestScores"></div>
+            <br>
+            <p id="scanning"></p>
+            <p id="score">% ( % )</p>
+            <p id="wins"> / ( % )</p>
+        </form>
+        <section id="buy2" class="load">
+            <form>
+                <label for="type">Type</label>
+                <select id="addtasselect" name="type">
+                    <option value="dblema">dblema</option>
+                    <option value="macd">macd</option>
+                    <option value="avc">avc</option>
+                    <option value="rsi">rsi</option>
+                    <option value="vwap">vwap</option>
+                </select>
+                <div id="tasSetings">
+                    <label for="set">Set</label>
+                    <textarea id="set" name="set" rows="1" required>[1,1]</textarea>
+                    <label for="lines">Lines</label>
+                    <textarea id="lines" name="lines" rows="1" required>[0]</textarea>
+                    <label for="lcolor">Line Colors</label>
+                    <textarea id="lcolor" name="lcolor" rows="1" required>["white"]</textarea>
+                    <label for="plines">Price Lines</label>
+                    <textarea id="plines" name="plines" rows="1" required>[]</textarea>
+                    <label for="fss">First Setting Smallest</label>
+                    <input type="text" id="fss" value="false" name="fss" required>
+                    <label for="overlay1">Overlay</label>
+                    <input type="text" id="overlay" value="false" name="overlay" required>
+                    <label for="check">Check</label>
+                    <textarea id="check" name="check" required rows="1">[[["id",0],">=",["nr",0]]]</textarea>
+                    <label for="calc">Calculate</label>
+                    <textarea id="calc" name="calc" required>(i, n, d) => {}</textarea>
+                </div>
+                <input type="button" value="Test" id="testTas">
+                <input type="button" value="Save" id="saveTas">
+            </form>
+        </section>
+    </main>
+    <script src="/assets/js/parts/lwc.js"></script>
+    <script src="/assets/js/parts/chart.js"></script>
+    <script src="/modules/types.js"></script>
+    <script src="/modules/check.js"></script>
+    <script src="/modules/tas.js"></script>
+    <script src="/modules/scan.js"></script>
+    <script src="/modules/highscores.js"></script>
+    <script src="/assets/js/tas/test.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+details {
+    padding: 10px 0;
+}
+
+.keepCh {
+    display: inline;
+    width: unset;
+}
+
+.selectedCopy {
+    color: yellowgreen;
+}
+
+#addCheckBestDetails {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#addCheckBestDetails summary {
+    padding-bottom: 5px;
+}
+
+#addCheckBestDetails p {
+    border: thin solid white;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+#bestScores {
+    width: 100%;
+}
+
+#bestScores details {
+    padding: 5px 0;
+}
+
+#bestScores summary span {
+    display: inline-block;
+}
+
+#bestScores table {
+    width: 100%;
+}
+
+#bestScores table tr {
+    padding: 5px 0;
+}
+
+#bestScores td {
+    padding: 5px 0;
+    text-align: center;
+}
+
+#bestScores td .copy {
+    text-align: left;
+}
+
+#buys li form {
+    padding: 0;
+}
+
+#checkBests .deleteCheck {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: red;
+    margin: 5px 0;
+    padding: 5px 0;
+    width: 10%;
+}
+
+#checkBests li {
+    align-items: stretch;
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+}
+
+#checkBests li input[type='text'] {
+    flex-grow: 1;
+    width: 75%;
+}
+
+#checkBests li span {
+    box-shadow: 0 0 5px white;
+    margin: 5px 0;
+    padding: 5px 0;
+    width: 90%;
+}
+
+#newCheckBest {
+    margin: 10px auto;
+    text-align: center;
+    width: 80%;
+}
+
+#bestScores summary span:nth-child(1),
+#bestScores tr td:nth-child(1) {
+    min-width: 40px;
+}
+
+#bestScores summary span:nth-child(2),
+#bestScores tr td:nth-child(2) {
+    min-width: 140px;
+}
+
+#bestScores summary span:nth-child(3),
+#bestScores tr td:nth-child(3) {
+    min-width: 100px;
+}
+
+#bestScores tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media only screen and (max-width: 550px) {
+    #bestScores tr td:nth-child(2) {
+        min-width: 70px;
+    }
+
+    #bestScores tr td:nth-child(3) {
+        min-width: 50px;
+    }
+}

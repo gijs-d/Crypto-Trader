@@ -1,0 +1,63 @@
+<%- include('../parts/head1') %>
+<title>Live</title>
+<link rel="stylesheet" href="/assets/css/live/live.css">
+<%- include('../parts/head2') %>
+
+<body>
+    <main>
+        <a href="/" class="backbtn">
+            <input type="button" class="navBtn" value="<-">
+        </a>
+        <nav class="menu">
+            <details>
+                <summary>
+                    Add New
+                </summary>
+                <form id="addLive">
+                    <label for="pair">Pair</label>
+                    <input type="text" name="pair" id="pair" value="BTCUSDT">
+                    <label for="timef">Timeframe</label>
+                    <input type="text" name="timef" id="timef" value="5m">
+                    <label for="fee">Fee</label>
+                    <input type="number" name="fee" id="fee" step="0.1" value="0">
+                    <label for="tas">Tas</label>
+                    <textarea type="text" name="tas" id="tas">dblema [ 1,2 ]</textarea>
+                    <label for="comment">Comment</label>
+                    <input type="text" name="comment" id="comment">
+                    <input type="submit" value="Add">
+                </form>
+            </details>
+            <form>
+                <details>
+                    <summary>
+                        Filter
+                    </summary>
+                    <section>
+                        <label for="searchPair">Pair</label>
+                        <input type="text" id="searchPair">
+                        <label for="searchTimef">Timeframe</label>
+                        <input type="text" id="searchTimef">
+                    </section>
+                </details>
+                <label for="sort">Sort On</label>
+                <select name="sort" id="sort">
+                    <option value="oldest" selected>Oldest</option>
+                    <option value="recent">Recent</option>
+                    <option value="pair">Pair</option>
+                    <option value="gain">Gain</option>
+                    <option value="loss">Loss</option>
+                </select>
+            </form>
+            <div>
+                <p id="nPairs"> &#129689; <%= (new Set(streamsIds.map(s=>s.split('-')[0]))).size %></p>
+                <p id="nStreams"> &#x1F4C8; <%= streamsIds.length %></p>
+                <p>&#x1F441; <span id="nLives"></span></p>
+            </div>
+            <ul id="lives"></ul>
+        </nav>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/assets/js/live/live.js"></script>
+</body>
+
+</html>

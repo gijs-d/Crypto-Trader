@@ -1,0 +1,40 @@
+<%- include('../parts/head1') %>
+<title>Fit</title>
+<link type="text/css" rel="stylesheet" href="/assets/css/scan/scan.css">
+<link type="text/css" rel="stylesheet" href="/assets/css/fit/fit.css">
+<%- include('../parts/head2') %>
+
+<body>
+    <main id="main">
+        <a href="/" class="backbtn">
+            <input type="button" class="navBtn" value="<-">
+        </a>
+        <div id="chart"></div>
+        <section id="buy2" class="load">
+            <p id="score"></p>
+            <div class="btns">
+                <label for="fee">Fee:</label>
+                <input type="number" id="fee" value="0.1">
+                <input type="button" value="Load" id="load">
+                <input type="button" value="Reload" id="reload">
+            </div>
+            <div class="addtas">
+                <select id="addtasselect">
+                    <option value="dblema">dblema</option>
+                </select>
+                <input type="button" value="Add">
+            </div>
+            <ul id="tas"></ul>
+        </section>
+    </main>
+    <script src="/assets/js/parts/lwc.js"></script>
+    <script src="/assets/js/parts/chart.js"></script>
+    <script src="/modules/types.js"></script>
+    <script src="/modules/check.js"></script>
+    <script src="/modules/tas.js"></script>
+    <script src="/modules/scan.js"></script>
+    <script src="/modules/highscores.js"></script>
+    <script src="/assets/js/fit/fit.js"></script>
+</body>
+
+</html>

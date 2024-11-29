@@ -1,0 +1,67 @@
+<%- include('../parts/head1') %>
+<title>Auto Scan</title>
+<link rel="stylesheet" href="/assets/css/autoScan/autoScan.css">
+<%- include('../parts/head2') %>
+
+<body>
+    <a href="/" class="backbtn">
+        <input type="button" class="navBtn" value="<-">
+    </a>
+    <main>
+        <section class="menu">
+            <ul id="sessions"></ul>
+        </section>
+        <form id="addProcess">
+            <label for="base">Base</label>
+            <input type="text" name="base" id="base" value="USDT">
+            <label for="delay">Delay</label>
+            <input type="number" name="delay" id="delay" value="500" min="0">
+            <details id="timeframes">
+                <summary>Timeframes: <span id="timeframesSelected">5</span></summary>
+                <div class="checkboxes">
+                    <label for="m3">3m
+                        <input type="checkbox" name="3m" id="m3" checked></label>
+                    <label for="m5">5m
+                        <input type="checkbox" name="5m" id="m5" checked></label>
+                    <label for="m15">15m
+                        <input type="checkbox" name="15m" id="m15" checked></label>
+                    <label for="m30">30m
+                        <input type="checkbox" name="30m" id="m30" checked></label>
+                    <label for="h1">1h
+                        <input type="checkbox" name="1h" id="h1" checked></label>
+                </div>
+            </details>
+            <details id="coins">
+                <summary>Coins: <span id="coinsSelected"><%= coins.length %></span></summary>
+                <input type="button" value="Select All" class="selectAll">
+                <input type="button" value="Unselect All" class="unselectAll">
+                <input type="button" value="No USD" id="noUSD">
+                <di class="checkboxes">
+                    <% coins.forEach(coin=>{%>
+                    <label for="coin-<%=coin%>">
+                        <%=coin%>
+                        <input type="checkbox" name="<%=coin%>" id="coin-<%=coin%>" <%=coin.includes('USD')?'':'checked' %>>
+                    </label>
+                    <% }) %>
+                    </div>
+            </details>
+
+            <details id="tas">
+                <summary>Tas: <span id="tasSelected"><%= types.length %></span></summary>
+                <input type="button" value="Select All" class="selectAll">
+                <di class="checkboxes">
+                    <% types.forEach(type=>{%>
+                    <label for="tas-<%=type%>">
+                        <%=type%>
+                        <input type="checkbox" name="<%=type%>" id="tas-<%=type%>" checked>
+                    </label>
+                    <% }) %>
+                    </div>
+            </details>
+            <input type="submit" value="Start Processes">
+        </form>
+    </main>
+    <script src="/assets/js/autoScan/autoScan.js"></script>
+</body>
+
+</html>
