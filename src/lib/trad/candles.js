@@ -1,7 +1,7 @@
 const ex = require('../exchange');
 const fs = require('fs');
 const Cli = require('../logs');
-const cli = new Cli( 'trad', 'candles.js');
+const cli = new Cli('trad', 'candles.js');
 
 class Candles {
     async getCandles(pair, timef, size) {
@@ -9,12 +9,11 @@ class Candles {
         let cdata;
         try {
             cdata = await fs.promises.readFile(filename);
+            cdata = JSON.parse(cdata);
         } catch {}
         if (!cdata) {
             cdata = await ex.getMulCandles(pair, timef, size);
             fs.promises.writeFile(`${filename}`, JSON.stringify(cdata));
-        } else {
-            cdata = JSON.parse(cdata);
         }
         return cdata;
     }
